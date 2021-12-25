@@ -1,0 +1,6 @@
+node_modules
+.vscode
+main-dist
+yarn-lock
+dist
+render/dist-render
