@@ -5,6 +5,7 @@
   "main": "./main-dist/index.js",
   "scripts": {
     "start:main": "tsc -w --p tsconfig.main.json",
+    "dev:e": "electron ./main/index",
     "start:react": "webpack serve --config render/config/webpack.dev.js",
     "build:react": "webpack --config render/config/webpack.prod.js",
     "build:main": "tsc --p tsconfig.main.json",
@@ -13,7 +14,7 @@
     "build:win": "electron-builder --win"
   },
   "build": {
-    "productName": "Christmas",
+    "productName": "Project",
     "appId": "org.react.vas",
     "mac": {
       "icon": "assets/icon.icns",
@@ -43,8 +44,7 @@
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.3.0",
-    "electron": "^15.1.2",
-    "electron-builder": "^22.13.1",
+    "electron-builder": "^23.0.2",
     "electron-reloader": "^1.2.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
@@ -52,6 +52,7 @@
     "style-loader": "^3.3.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.3",
+    "electron": "^21.3.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.58.1",
     "webpack-cli": "^4.9.0",

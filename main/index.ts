@@ -12,12 +12,13 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
+  console.log('isDev',isDev )
   if (isDev) {
     try {
       require("electron-reloader")(module, {});
     } catch (_) {}
     window.webContents.openDevTools();
-    window.loadURL("http://localhost:8080");
+    window.loadURL("http://localhost:3000");
   } else {
     window.loadFile(resolve(__dirname, "../render/dist-render/index.html"));
   }
